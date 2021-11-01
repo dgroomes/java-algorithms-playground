@@ -1,20 +1,10 @@
 package dgroomes;
 
-public class TestCase<T> {
-	
-	private final T input;
-	private final boolean expectedResult;
-	
-	public TestCase(T input, boolean expectedResult) {
-		this.input = input;
-		this.expectedResult = expectedResult;
-	}
-	
-	public T input() {
-		return input;
-	}; 	
-	
-	public boolean expectedResult() {
-		return expectedResult;
-	};
+/**
+ * A test case definition.
+ *
+ * This is a simple is a data holder class ( represents the data for a test
+ * @param <T>
+ */
+public record TestCase<T>(T input, boolean expectedResult) {
 }
