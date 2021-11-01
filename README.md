@@ -1,4 +1,4 @@
-# my-algorithms
+# algorithms-playground
 
 📚 Learning and exploring algorithms (simple ones!) in Java.
 

@@ -1,1 +1,1 @@
-rootProject.name = "my-algorithms"
+rootProject.name = "algorithms-playground"
