@@ -18,6 +18,8 @@ General clean-ups, TODOs and things I wish to implement for this project:
 
 * IN PROGRESS Organize everything. Delete the unused code. Finish the unfinished code. Use consistent package names between the main
   and source test sets.
+  * DONE Fix the classpath scanning stuff. Guava recommends not using their own utility (`com.google.common.reflect.ClassPath`)
+    and recommends using <https://github.com/classgraph/classgraph>.
 * Consider a "zero-weight project". Meaning, consider removing all dependencies, and Gradle and instead only having Java
   source in this project. The project would be built with a direct invocation of `javac`. Why? It's rare to have Java
   projects without a build tool like Gradle or Maven but in an academic context, we just want to focus on the task at

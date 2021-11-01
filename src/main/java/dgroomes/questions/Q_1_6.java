@@ -1,8 +1,8 @@
 package dgroomes.questions;
 
-/**
- * Created by David Groomes on 9/18/2015.
- */
+import dgroomes.meta.QuestionAnswer;
+
+@QuestionAnswer(chapter = 1, question = 6)
 public class Q_1_6 {
 
     public static void rotateNinetyDegrees_directLowLevel(char[][] matrix) {
@@ -17,7 +17,7 @@ public class Q_1_6 {
                 char temp = matrix[quadrantOneX][quadrantOneY];
                 matrix[quadrantOneX][quadrantOneY] = toAssign;
                 toAssign = temp;
-                int quadrantFourX = widthAndHeight - 1-  quadrantOneY;
+                int quadrantFourX = widthAndHeight - 1 - quadrantOneY;
                 int quadrantFourY = quadrantOneX;
                 temp = matrix[quadrantFourX][quadrantFourY];
                 matrix[quadrantFourX][quadrantFourY] = toAssign;

@@ -1,10 +1,13 @@
 package dgroomes.questions;
 
+import dgroomes.meta.QuestionAnswer;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static dgroomes.TestCase.test;
 
+@QuestionAnswer(chapter = 1, question = 3)
 public class Q_1_3 {
 
     public static void main(String[] args) {

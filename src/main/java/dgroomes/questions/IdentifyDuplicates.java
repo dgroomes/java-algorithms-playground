@@ -28,9 +28,6 @@ public interface IdentifyDuplicates {
         return List.of(1, 3, 2, 1, 3, 3);
     }
 
-//    interface IdentifyDuplicatesInterace {
-//    }
-
     /**
      * Generate the list-under-test using a fixed seed and the Random class. Why fixed seed? For reproducible performance
      * test results.
