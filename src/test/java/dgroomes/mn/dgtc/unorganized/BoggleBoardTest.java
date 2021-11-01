@@ -1,6 +1,6 @@
 package dgroomes.mn.dgtc.unorganized;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import dgroomes.BoggleBoard;
 import dgroomes.BoggleTile;
 

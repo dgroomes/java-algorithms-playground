@@ -1,6 +1,6 @@
 package dgroomes.questions;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import dgroomes.Matrix;
 import dgroomes.MatrixUtils;
 
