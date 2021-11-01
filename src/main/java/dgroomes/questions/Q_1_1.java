@@ -1,22 +1,27 @@
 package dgroomes.questions;
 
-import dgroomes.TestCase;
 import dgroomes.meta.QuestionAnswer;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Set;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import static dgroomes.TestCase.test;
 
 @QuestionAnswer(chapter = 1, question = 1)
 public class Q_1_1 {
+
+    public static void main(String[] args) {
+        new Q_1_1().question_1_1_v_1();
+    }
+
     public void question_1_1_v_1() {
-        List<TestCase<String>> testCases = new ArrayList<>();
-        testCases.add(new TestCase<>("a", true));
-        testCases.add(new TestCase<>("ab", true));
-        testCases.add(new TestCase<>("ba", true));
-        testCases.add(new TestCase<>("aa", false));
-        testCases.add(new TestCase<>("", true));
+        var testCases = List.of(
+                test("a", true),
+                test("ab", true),
+                test("ba", true),
+                test("aa", false),
+                test("", true));
         System.out.println("testing: charsAreAllUnique_v_1");
         System.out.println("input string|expected result|actual result");
         testCases.forEach(testCase -> {
