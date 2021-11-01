@@ -2,10 +2,9 @@ package dgroomes.boggle;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
+import static dgroomes.boggle.BoggleTileAssert.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class BoggleBoardTest {
@@ -13,39 +12,37 @@ public class BoggleBoardTest {
     @Test
     public void testIterator() throws Exception {
         // Arrange
-        BoggleBoard boggleBoard = makeBoard();
+        var boggleBoard = makeBoard();
 
         // Act
-        Iterator<BoggleTile> iterator = boggleBoard.iterator();
+        var iterator = boggleBoard.iterator();
 
         // Assert
         assertThat(iterator.hasNext()).isTrue();
-        BoggleTileAssert.assertThat(iterator.next()).hasLetter('i');
+        assertThat(iterator.next()).hasLetter('i');
         assertThat(iterator.hasNext()).isTrue();
-        BoggleTileAssert.assertThat(iterator.next()).hasLetter('t');
+        assertThat(iterator.next()).hasLetter('t');
         assertThat(iterator.hasNext()).isTrue();
-        BoggleTileAssert.assertThat(iterator.next()).hasLetter('z');
+        assertThat(iterator.next()).hasLetter('z');
         assertThat(iterator.hasNext()).isTrue();
-        BoggleTileAssert.assertThat(iterator.next()).hasLetter('z');
+        assertThat(iterator.next()).hasLetter('z');
         assertThat(iterator.hasNext()).isTrue();
-        BoggleTileAssert.assertThat(iterator.next()).hasLetter('s');
+        assertThat(iterator.next()).hasLetter('s');
         assertThat(iterator.hasNext()).isTrue();
-        BoggleTileAssert.assertThat(iterator.next()).hasLetter('z');
+        assertThat(iterator.next()).hasLetter('z');
         assertThat(iterator.hasNext()).isTrue();
-        BoggleTileAssert.assertThat(iterator.next()).hasLetter('z');
+        assertThat(iterator.next()).hasLetter('z');
         assertThat(iterator.hasNext()).isTrue();
-        BoggleTileAssert.assertThat(iterator.next()).hasLetter('z');
+        assertThat(iterator.next()).hasLetter('z');
         assertThat(iterator.hasNext()).isTrue();
-        BoggleTileAssert.assertThat(iterator.next()).hasLetter('z');
+        assertThat(iterator.next()).hasLetter('z');
         assertThat(iterator.hasNext()).isFalse();
     }
 
-    //<editor-fold desc="Test helpers">
     public static BoggleBoard makeBoard() {
-        List<Character> row1 = Arrays.asList('i', 't', 'z');
-        List<Character> row2 = Arrays.asList('z', 's', 'z');
-        List<Character> row3 = Arrays.asList('z', 'z', 'z');
-        return BoggleBoard.buildBoggleBoard(Arrays.asList(row1, row2, row3));
+        var row1 = List.of('i', 't', 'z');
+        var row2 = List.of('z', 's', 'z');
+        var row3 = List.of('z', 'z', 'z');
+        return BoggleBoard.buildBoggleBoard(List.of(row1, row2, row3));
     }
-    //</editor-fold>
 }

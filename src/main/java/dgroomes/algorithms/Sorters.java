@@ -67,10 +67,11 @@ public class Sorters {
      * Requires mutable list
      */
     public static <E extends Comparable<E>> List<E> quickSort(List<E> list) {
-        if (list.size() > 1) {
-            quickSortInternal(list, 0, list.size() - 1);
+        var listCopy = new ArrayList<E>(list);
+        if (listCopy.size() > 1) {
+            quickSortInternal(listCopy, 0, listCopy.size() - 1);
         }
-        return list;
+        return listCopy;
     }
 
     public static <E extends Comparable<E>> void quickSortInternal(List<E> list, int start, int end) {

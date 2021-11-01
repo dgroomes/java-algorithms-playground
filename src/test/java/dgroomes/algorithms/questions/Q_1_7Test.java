@@ -10,7 +10,7 @@ public class Q_1_7Test {
 
     @Test
     public void testZeroColumnsAndRowsOfZeroPoints() throws Exception {
-        Matrix matrix = Matrix.createOne(3, 3,
+        var matrix = Matrix.createOne(3, 3,
                 'x', 'x', 'x',
                 '0', 'x', 'x',
                 'x', 'x', 'x'
