@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.boggle;
 
 import java.util.HashSet;
 import java.util.Set;

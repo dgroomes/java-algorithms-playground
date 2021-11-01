@@ -1,4 +1,6 @@
-package dgroomes;
+package dgroomes.boggle;
+
+import dgroomes.coordinates.Point;
 
 public record BoggleTile(
         Point point,

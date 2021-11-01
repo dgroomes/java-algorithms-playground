@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.boggle;
 
 import java.util.Arrays;
 import java.util.List;

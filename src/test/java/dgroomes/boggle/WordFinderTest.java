@@ -1,8 +1,5 @@
-package dgroomes.mn.dgtc.unorganized;
+package dgroomes.boggle;
 
-import dgroomes.BoggleBoard;
-import dgroomes.Dictionary;
-import dgroomes.WordFinder;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

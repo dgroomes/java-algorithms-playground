@@ -1,4 +1,6 @@
-package dgroomes;
+package dgroomes.boggle;
+
+import dgroomes.coordinates.Point;
 
 import java.util.*;
 import java.util.stream.Collectors;

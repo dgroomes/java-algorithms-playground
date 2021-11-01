@@ -1,6 +1,5 @@
-package dgroomes.mn.dgtc.unorganized;
+package dgroomes.boggle;
 
-import dgroomes.BoggleTile;
 import org.assertj.core.api.AbstractAssert;
 
 import java.util.Objects;

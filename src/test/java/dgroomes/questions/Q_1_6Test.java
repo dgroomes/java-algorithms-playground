@@ -1,9 +1,8 @@
-package dgroomes.mn.dgtc.unorganized;
+package dgroomes.questions;
 
-import dgroomes.Coordinates;
-import dgroomes.MatrixUtils;
-import dgroomes.SquareMatrix;
-import dgroomes.questions.Q_1_6;
+import dgroomes.coordinates.Coordinates;
+import dgroomes.coordinates.MatrixUtils;
+import dgroomes.coordinates.SquareMatrix;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

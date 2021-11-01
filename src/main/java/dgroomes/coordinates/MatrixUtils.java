@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.coordinates;
 
 import java.util.HashSet;
 import java.util.Set;

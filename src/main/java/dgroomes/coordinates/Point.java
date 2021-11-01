@@ -1,8 +1,8 @@
-package dgroomes;
+package dgroomes.coordinates;
 
 public record Point(int x, int y) {
 
-    enum AdjacentPositionFinders {
+    public enum AdjacentPositionFinders {
         TOP(0, -1),
         TOP_RIGHT(1, -1),
         RIGHT(1, 0),
@@ -12,8 +12,8 @@ public record Point(int x, int y) {
         LEFT(-1, 0),
         TOP_LEFT(-1, -1);
 
-        private int xOffset;
-        private int yOffset;
+        private final int xOffset;
+        private final int yOffset;
 
         AdjacentPositionFinders(int xOffset, int yOffset) {
             this.xOffset = xOffset;

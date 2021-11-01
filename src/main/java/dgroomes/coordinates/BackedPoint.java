@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.coordinates;
 
 /**
  * A point that's backed by (or associated with) some data structure.

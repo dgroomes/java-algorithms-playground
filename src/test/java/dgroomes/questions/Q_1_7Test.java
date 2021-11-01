@@ -1,7 +1,7 @@
 package dgroomes.questions;
 
-import dgroomes.Matrix;
-import dgroomes.MatrixUtils;
+import dgroomes.coordinates.Matrix;
+import dgroomes.coordinates.MatrixUtils;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

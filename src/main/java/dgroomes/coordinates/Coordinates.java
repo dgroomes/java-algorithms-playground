@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.coordinates;
 
 public record Coordinates(
         int x,
