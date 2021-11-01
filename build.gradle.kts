@@ -8,7 +8,7 @@ repositories {
 }
 
 application {
-    mainClass.set("us.mn.dgtc.Main")
+    mainClass.set("dgroomes.Main")
 }
 
 dependencies {
