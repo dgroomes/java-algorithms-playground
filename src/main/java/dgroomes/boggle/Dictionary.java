@@ -16,7 +16,7 @@ public record Dictionary(
     }
 
     public static Dictionary createDictionary() {
-        return new Dictionary(Arrays.asList("it", "is", "its", "zit", "zits", "sit", "aardvark", "thumb", "speakers", "complimentary", "ski", "ray"));
+        return new Dictionary(List.of("it", "is", "its", "zit", "zits", "sit", "aardvark", "thumb", "speakers", "complimentary", "ski", "ray"));
     }
 
 }

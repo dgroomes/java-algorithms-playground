@@ -60,7 +60,7 @@ public class Q_1_6Test {
     @Test
     public void rotateNinetyDegress_highLevel_twoByTwo() throws Exception {
         // Arrange
-        SquareMatrix<Character> matrix = new SquareMatrix(Arrays.asList(Arrays.asList('1', '2'), Arrays.asList('3', '4')));
+        var matrix = new SquareMatrix<>(Arrays.asList(Arrays.asList('1', '2'), Arrays.asList('3', '4')));
 
         // Act
         MatrixUtils.rotateMatrixNinetyDegrees(matrix);
