@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.testing;
 
 /**
  * An object that will be asserted against.

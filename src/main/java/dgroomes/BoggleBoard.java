@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static dgroomes.Assertions.assertThat;
+import static dgroomes.testing.Assertions.assertThat;
 
 /**
  * You know the game Boggle? This Class represent the Boggle tile board. Tiles on the table are zero-indexed. E.g. a tile's coordinates

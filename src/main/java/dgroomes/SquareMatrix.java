@@ -1,5 +1,7 @@
 package dgroomes;
 
+import dgroomes.testing.Assertions;
+
 import java.util.Arrays;
 import java.util.List;
 

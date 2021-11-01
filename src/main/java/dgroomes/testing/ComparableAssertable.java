@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.testing;
 
 /**
  * Just like {@link Assertable} but for comparable types.

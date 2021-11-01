@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-import static dgroomes.Assertions.assertThat;
+import static dgroomes.testing.Assertions.assertThat;
 
 /**
  * This class represents a trail of contiguous Boggle tiles. Imagine when you play Boggle, you're drawing trails of contiguous 

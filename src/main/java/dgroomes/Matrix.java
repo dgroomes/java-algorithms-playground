@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
-import static dgroomes.Assertions.assertThat;
+import static dgroomes.testing.Assertions.assertThat;
 
 public class Matrix<T> implements Iterable<BackedPoint<T>> {
 

@@ -4,7 +4,7 @@ import java.util.stream.Collectors;
 import java.util.Set;
 import java.util.HashSet;
 
-import static dgroomes.Assertions.assertThat;
+import static dgroomes.testing.Assertions.assertThat;
 
 public class WordFinder {
 	

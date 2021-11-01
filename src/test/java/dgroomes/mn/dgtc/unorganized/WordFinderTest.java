@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import static dgroomes.Assertions.assertThat;
+import static dgroomes.testing.Assertions.assertThat;
 
 public class WordFinderTest {
 

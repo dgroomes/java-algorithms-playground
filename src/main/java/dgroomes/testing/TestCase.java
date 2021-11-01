@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.testing;
 
 /**
  * A test case definition.

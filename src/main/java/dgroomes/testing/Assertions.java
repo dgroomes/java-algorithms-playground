@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.testing;
 
 public class Assertions {
     public static <T> Assertable<T> assertThat(T actual) {

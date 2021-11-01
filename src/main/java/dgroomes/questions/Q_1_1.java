@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import static dgroomes.TestCase.test;
+import static dgroomes.testing.TestCase.test;
 
 @QuestionAnswer(chapter = 1, question = 1)
 public class Q_1_1 {
