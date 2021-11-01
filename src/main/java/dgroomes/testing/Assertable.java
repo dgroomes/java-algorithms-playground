@@ -15,7 +15,7 @@ public class Assertable<T> {
         this.actual = actual;
     }
 
-    public void isEqualTo(Object expected) {
+    public void isEqualTo(T expected) {
         boolean result = actual.equals(expected);
         if (!result) {
             fail("actualValue=" + actual + " is not equal to expectedValue=" + expected);
@@ -29,6 +29,6 @@ public class Assertable<T> {
     }
 
     protected void fail(String message) {
-        throw new RuntimeException("assertion failed. " + message);
+        throw new RuntimeException("Assertion failed. " + message);
     }
 }

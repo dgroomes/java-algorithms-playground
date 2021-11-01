@@ -8,4 +8,8 @@ public class Assertions {
     public static <T extends Comparable<T>> ComparableAssertable<T> assertThat(T actual) {
         return new ComparableAssertable<>(actual);
     }
+
+    public static CharArrayAssertable assertThat(char[] actual) {
+        return new CharArrayAssertable(actual);
+    }
 }
