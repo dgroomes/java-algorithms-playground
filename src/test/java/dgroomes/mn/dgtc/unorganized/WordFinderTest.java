@@ -1,18 +1,16 @@
 package dgroomes.mn.dgtc.unorganized;
 
-import org.junit.jupiter.api.Test;
-import dgroomes.Assertions;
 import dgroomes.BoggleBoard;
 import dgroomes.Dictionary;
 import dgroomes.WordFinder;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by David Groomes on 9/15/2015.
- */
+import static dgroomes.Assertions.assertThat;
+
 public class WordFinderTest {
 
     @Test
@@ -25,6 +23,6 @@ public class WordFinderTest {
         Set<String> foundWords = wordFinder.findWords();
 
         // Assert
-        Assertions.assertThat(foundWords).isEqualTo(new HashSet<>(Arrays.asList("it", "is", "its", "zit", "zits", "sit")));
+        assertThat(foundWords).isEqualTo(new HashSet<>(Arrays.asList("it", "is", "its", "zit", "zits", "sit")));
     }
 }

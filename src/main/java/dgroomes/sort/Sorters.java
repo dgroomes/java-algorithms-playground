@@ -3,12 +3,9 @@ package dgroomes.sort;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by David Groomes on 9/28/2015.
- */
 public class Sorters {
 
-    static class ListPair<E extends Comparable> {
+    static class ListPair<E extends Comparable<E>> {
         List<E> leftList;
         List<E> rightList;
 
@@ -18,7 +15,7 @@ public class Sorters {
         }
     }
 
-    public static <E extends Comparable> List<E> mergeSort(List<E> list) {
+    public static <E extends Comparable<E>> List<E> mergeSort(List<E> list) {
         if (list.size() > 1) {
             ListPair<E> splitSorted = splitAndSort(list);
             return merge(splitSorted);
@@ -27,25 +24,21 @@ public class Sorters {
         }
     }
 
-    private static <E extends Comparable> ListPair<E> splitAndSort(List<E> list) {
+    private static <E extends Comparable<E>> ListPair<E> splitAndSort(List<E> list) {
         if (list.size() <= 1) {
             throw new IllegalStateException("#splitAndSort takes lists of size 2 or greater, but was called with size 1 or 0.");
         } else {
             int middleIndex = list.size() / 2;
             List<E> leftList = list.subList(0, middleIndex);
             List<E> rightList = list.subList(middleIndex, list.size());
-            return new ListPair<E>(mergeSort(leftList), mergeSort(rightList));
+            return new ListPair<>(mergeSort(leftList), mergeSort(rightList));
         }
     }
 
     /**
      * Takes a ListPair where its lists are ordered
-     *
-     * @param pair
-     * @param <E>
-     * @return
      */
-    private static <E extends Comparable> List<E> merge(ListPair<E> pair) {
+    private static <E extends Comparable<E>> List<E> merge(ListPair<E> pair) {
         List<E> combinedList = new ArrayList<>();
         int leftListIndex = 0;
         int rightListIndex = 0;
@@ -72,19 +65,15 @@ public class Sorters {
 
     /**
      * Requires mutable list
-     *
-     * @param list
-     * @param <E>
-     * @return
      */
-    public static <E extends Comparable> List<E> quickSort(List<E> list) {
+    public static <E extends Comparable<E>> List<E> quickSort(List<E> list) {
         if (list.size() > 1) {
             quickSortInternal(list, 0, list.size() - 1);
         }
         return list;
     }
 
-    public static <E extends Comparable> void quickSortInternal(List<E> list, int start, int end) {
+    public static <E extends Comparable<E>> void quickSortInternal(List<E> list, int start, int end) {
         if (start < end) {
             int pivot = partition(list, start, end);
             quickSortInternal(list, start, pivot - 1);
@@ -92,7 +81,7 @@ public class Sorters {
         }
     }
 
-    private static <E extends Comparable> int partition(List<E> list, int start, int end) {
+    private static <E extends Comparable<E>> int partition(List<E> list, int start, int end) {
         int boundaryOfLessers = start;
         E pivot = list.get(end);
 

@@ -6,14 +6,16 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by David Groomes on 2/21/2016.
- *
- * Answer attempts to programming questions must be annotated with this, to describe which question they are answering.
+ * This is a class-level annotation that should be added to answer attempts to algorithm programming questions.
+ * As the codebase grows, its useful to be able to programmatically describe the full range of questions and answers.
+ * Plus, it's just fun to play with annotations.
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface QuestionAnswer {
     int chapter();
+
     int question();
+
     int attempt() default 1;
 }

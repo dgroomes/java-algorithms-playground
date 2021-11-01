@@ -4,6 +4,11 @@ import io.github.classgraph.ClassGraph;
 
 import java.util.Collection;
 
+/**
+ * Analyze the range of algorithm questions that have been answered in this codebase.
+ * <p>
+ * The analysis process uses classpath scanning to find classes with a special annotation.
+ */
 public class QuestionAnalyzer {
 
     public static void main(String[] args) throws Exception {

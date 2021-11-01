@@ -5,23 +5,22 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * Created by David Groomes on 9/18/2015.
- */
+import static dgroomes.Assertions.assertThat;
+
 public class Matrix<T> implements Iterable<BackedPoint<T>> {
 
-    private List<List<T>> matrix;
+    private final List<List<T>> matrix;
 
     public Matrix(List<List<T>> matrix) {
-        Assertions.assertThat(matrix.size() > 0);
+        assertThat(matrix.size()).isGreaterThan(0);
         this.matrix = matrix;
     }
 
-    public static <T> Matrix createOne(int x, int y, T... items) {
+    public static <T> Matrix<T> createOne(int x, int y, T... items) {
         if (items.length != x * y) {
             throw new IllegalArgumentException("size of argument 'items' does not match the expected size of a matrix of size " + x + " by " + y);
         } else {
-            return new Matrix(ListUtil.partitionList(Arrays.asList(items), x));
+            return new Matrix<>(ListUtil.partitionList(Arrays.asList(items), x));
         }
     }
 
@@ -49,8 +48,7 @@ public class Matrix<T> implements Iterable<BackedPoint<T>> {
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
-        } else if (obj instanceof Matrix) {
-            Matrix that = (Matrix) obj;
+        } else if (obj instanceof Matrix that) {
             return Objects.equals(matrix, that.matrix);
         } else {
             return false;
@@ -77,7 +75,7 @@ public class Matrix<T> implements Iterable<BackedPoint<T>> {
 
     @Override
     public Iterator<BackedPoint<T>> iterator() {
-        return new Iterator<BackedPoint<T>>() {
+        return new Iterator<>() {
 
             private BackedPoint<T> currentBackedPoint;
 
@@ -90,7 +88,7 @@ public class Matrix<T> implements Iterable<BackedPoint<T>> {
             public BackedPoint<T> next() {
                 if (currentBackedPoint == null) {
                     currentBackedPoint = getBackedPoint(new Coordinates(0, 0));
-                } else if (currentBackedPoint.getX() < width() - 1){
+                } else if (currentBackedPoint.getX() < width() - 1) {
                     currentBackedPoint = getBackedPoint(new Coordinates(currentBackedPoint.getX() + 1, currentBackedPoint.getY()));
                 } else {
                     currentBackedPoint = getBackedPoint(new Coordinates(0, currentBackedPoint.getY() + 1));
