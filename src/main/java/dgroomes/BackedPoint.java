@@ -1,15 +1,21 @@
 package dgroomes;
 
-public class BackedPoint<T> extends Point {
-
-    private final T backedItem;
+/**
+ * A point that's backed by (or associated with) some data structure.
+ */
+public record BackedPoint<T>(
+        Point point,
+        T backedItem) {
 
     public BackedPoint(T backedItem, int x, int y) {
-        super(x, y);
-        this.backedItem = backedItem;
+        this(new Point(x, y), backedItem);
     }
 
-    public T getBackedItem() {
-        return backedItem;
+    public int x() {
+        return point.x();
+    }
+
+    public int y() {
+        return point.y();
     }
 }

@@ -33,15 +33,15 @@ public class Matrix<T> implements Iterable<BackedPoint<T>> {
     }
 
     public BackedPoint<T> getBackedPoint(Coordinates coordinates) {
-        return new BackedPoint<>(get(coordinates), coordinates.getX(), coordinates.getY());
+        return new BackedPoint<>(get(coordinates), coordinates.x(), coordinates.y());
     }
 
     public T get(Coordinates coordinates) {
-        return matrix.get(coordinates.getY()).get(coordinates.getX());
+        return matrix.get(coordinates.y()).get(coordinates.x());
     }
 
     public void set(Coordinates coordinates, T toAssign) {
-        matrix.get(coordinates.getY()).set(coordinates.getX(), toAssign);
+        matrix.get(coordinates.y()).set(coordinates.x(), toAssign);
     }
 
     @Override
@@ -81,17 +81,17 @@ public class Matrix<T> implements Iterable<BackedPoint<T>> {
 
             @Override
             public boolean hasNext() {
-                return currentBackedPoint == null || !(currentBackedPoint.getX() == width() - 1 && currentBackedPoint.getY() == height() - 1);
+                return currentBackedPoint == null || !(currentBackedPoint.x() == width() - 1 && currentBackedPoint.y() == height() - 1);
             }
 
             @Override
             public BackedPoint<T> next() {
                 if (currentBackedPoint == null) {
                     currentBackedPoint = getBackedPoint(new Coordinates(0, 0));
-                } else if (currentBackedPoint.getX() < width() - 1) {
-                    currentBackedPoint = getBackedPoint(new Coordinates(currentBackedPoint.getX() + 1, currentBackedPoint.getY()));
+                } else if (currentBackedPoint.x() < width() - 1) {
+                    currentBackedPoint = getBackedPoint(new Coordinates(currentBackedPoint.x() + 1, currentBackedPoint.y()));
                 } else {
-                    currentBackedPoint = getBackedPoint(new Coordinates(0, currentBackedPoint.getY() + 1));
+                    currentBackedPoint = getBackedPoint(new Coordinates(0, currentBackedPoint.y() + 1));
                 }
                 return currentBackedPoint;
             }

@@ -28,7 +28,7 @@ public class MatrixUtils {
     }
 
     private static Coordinates rotateCoordinatesNinetyDegrees(SquareMatrix<?> matrix, Coordinates coordinates) {
-        return new Coordinates(matrix.size() - 1 - coordinates.getY(), coordinates.getX());
+        return new Coordinates(matrix.size() - 1 - coordinates.y(), coordinates.x());
     }
 
     private static int halfRoundUp(int i) {
@@ -39,9 +39,9 @@ public class MatrixUtils {
         Set<Integer> rowsToZero = new HashSet<>();
         Set<Integer> columnsToZero = new HashSet<>();
         matrix.forEach(backedPoint -> {
-            if (backedPoint.getBackedItem().equals(zeroPoint)) {
-                rowsToZero.add(backedPoint.getY());
-                columnsToZero.add(backedPoint.getX());
+            if (backedPoint.backedItem().equals(zeroPoint)) {
+                rowsToZero.add(backedPoint.y());
+                columnsToZero.add(backedPoint.x());
             }
         });
         rowsToZero.forEach(row -> {

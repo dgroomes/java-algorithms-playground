@@ -13,8 +13,8 @@ class BoggleTileAssert extends AbstractAssert<BoggleTileAssert, BoggleTile> {
     public void hasLetter(char c) {
         isNotNull();
 
-        if (!Objects.equals(c, actual.getLetter())) {
-            failWithMessage("Expected boggle tile to have letter <%s> but was <%s>", c, actual.getLetter());
+        if (!Objects.equals(c, actual.letter())) {
+            failWithMessage("Expected boggle tile to have letter <%s> but was <%s>", c, actual.letter());
         }
     }
 
