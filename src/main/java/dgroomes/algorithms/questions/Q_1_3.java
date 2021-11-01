@@ -9,10 +9,19 @@ import static dgroomes.testing.TestCase.test;
 public class Q_1_3 {
 
     public static void main(String[] args) {
-        new Q_1_3().v_1();
+        execute(V1);
+        execute(V2);
     }
 
-    public void v_1() {
+    /**
+     * Are two strings permutations of each other? For example, "acb" is a permutation of "cab".
+     */
+    @FunctionalInterface
+    interface IsPermutation {
+        boolean isPermutation(String a, String b);
+    }
+
+    public static void execute(IsPermutation algorithm) {
         var testCases = List.of(
                 test("baa", true),
                 test("aba", true),
@@ -20,27 +29,32 @@ public class Q_1_3 {
         System.out.println("testing: isAPermutationOfB");
         System.out.println("input string|expected result|actual result");
         testCases.forEach(testCase -> {
-            boolean foundResult = isAPermutationOfB("baa", testCase.input());
+            boolean foundResult = algorithm.isPermutation("baa", testCase.input());
             System.out.println(testCase.input() + "|" + testCase.expectedResult() + "|" + foundResult);
         });
     }
 
-    /**
-     * Permutation is a combination of some things where order matters
-     */
-    public boolean isAPermutationOfB(String a, String b) {
-        return sortIntoCharacters(a).equals(sortIntoCharacters(b));
-    }
+    static IsPermutation V1 = new IsPermutation() {
+        @Override
+        public boolean isPermutation(String a, String b) {
+            return sortIntoCharacters(a).equals(sortIntoCharacters(b));
+        }
 
-    public boolean isAPermutationOfB2(String a, String b) {
-        return sortIntoCharacters2(a).equals(sortIntoCharacters2(b));
-    }
+        private List<Character> sortIntoCharacters(String s) {
+            return s.chars().mapToObj(i -> (char) i).sorted().collect(Collectors.toList());
+        }
+    };
 
-    private List<Character> sortIntoCharacters(String s) {
-        return s.chars().mapToObj(i -> (char) i).sorted().collect(Collectors.toList());
-    }
+    // An alternative implementation
+    static IsPermutation V2 = new IsPermutation() {
 
-    private List<Integer> sortIntoCharacters2(String s) {
-        return s.chars().sorted().boxed().collect(Collectors.toList());
-    }
+        @Override
+        public boolean isPermutation(String a, String b) {
+            return sortIntoCharacters2(a).equals(sortIntoCharacters2(b));
+        }
+
+        private List<Integer> sortIntoCharacters2(String s) {
+            return s.chars().sorted().boxed().collect(Collectors.toList());
+        }
+    };
 }

@@ -9,17 +9,17 @@ import java.util.Set;
 @QuestionAnswer(chapter = 1, question = 1)
 public class Q_1_1 {
 
+    public static void main(String[] args) {
+        test(CLEVER);
+        test(SIMPLE);
+    }
+
     /**
      * Check if a given string contains only unique characters (i.e. no duplicates).
      */
     @FunctionalInterface
     interface CharsAreAllUnique {
         boolean charsAreAllUnique(String input);
-    }
-
-    public static void main(String[] args) {
-        test(CLEVER);
-        test(SIMPLE);
     }
 
     public static void test(CharsAreAllUnique algorithm) {
