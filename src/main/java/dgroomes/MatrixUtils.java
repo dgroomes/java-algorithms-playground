@@ -3,11 +3,8 @@ package dgroomes;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by David Groomes on 9/18/2015.
- */
 public class MatrixUtils {
-    
+
     public static <T> void rotateMatrixNinetyDegrees(SquareMatrix<T> matrix) {
         int widthAndHeight = matrix.size();
         int baseQuadrantWidth = halfRoundUp(matrix.size());
@@ -35,7 +32,7 @@ public class MatrixUtils {
     }
 
     private static int halfRoundUp(int i) {
-        return i - Math.floorDiv(i ,2);
+        return i - Math.floorDiv(i, 2);
     }
 
     public static <T> void zeroColumnsAndRowsOfZeroPoints(Matrix<T> matrix, T zeroPoint) {

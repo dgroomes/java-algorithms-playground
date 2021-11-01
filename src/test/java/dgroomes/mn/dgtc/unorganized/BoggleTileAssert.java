@@ -1,13 +1,10 @@
 package dgroomes.mn.dgtc.unorganized;
 
-import org.assertj.core.api.AbstractAssert;
 import dgroomes.BoggleTile;
+import org.assertj.core.api.AbstractAssert;
 
 import java.util.Objects;
 
-/**
- * Created by David Groomes on 9/15/2015.
- */
 class BoggleTileAssert extends AbstractAssert<BoggleTileAssert, BoggleTile> {
     protected BoggleTileAssert(BoggleTile actual) {
         super(actual, BoggleTileAssert.class);

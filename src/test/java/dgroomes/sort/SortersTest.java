@@ -6,9 +6,6 @@ import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by David Groomes on 9/28/2015.
- */
 public class SortersTest {
 
     @Test

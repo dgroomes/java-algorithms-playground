@@ -1,8 +1,8 @@
 package dgroomes.mn.dgtc.unorganized;
 
-import org.junit.jupiter.api.Test;
 import dgroomes.BoggleBoard;
 import dgroomes.BoggleTile;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -10,9 +10,6 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by David Groomes on 9/15/2015.
- */
 public class BoggleBoardTest {
 
     @Test

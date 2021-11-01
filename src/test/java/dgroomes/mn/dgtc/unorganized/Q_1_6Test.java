@@ -1,18 +1,15 @@
 package dgroomes.mn.dgtc.unorganized;
 
-import org.junit.jupiter.api.Test;
 import dgroomes.Coordinates;
 import dgroomes.MatrixUtils;
 import dgroomes.SquareMatrix;
 import dgroomes.questions.Q_1_6;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by David Groomes on 9/18/2015.
- */
 public class Q_1_6Test {
 
     @Test

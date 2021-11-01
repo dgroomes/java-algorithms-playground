@@ -3,9 +3,6 @@ package dgroomes;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by David Groomes on 9/19/2015.
- */
 public class ListUtil {
 
     public static <T> List<List<T>> partitionList(List<T> list, int sizeOfFullSizedSubLists) {

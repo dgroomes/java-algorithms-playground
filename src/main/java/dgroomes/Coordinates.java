@@ -1,8 +1,5 @@
 package dgroomes;
 
-/**
- * Created by David Groomes on 9/18/2015.
- */
 public class Coordinates {
 
     private final int x;

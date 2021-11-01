@@ -6,9 +6,6 @@ import java.util.Collection;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by David Groomes on 2/21/2016.
- */
 public class QuestionAnswerScannerTest {
 
     @Test

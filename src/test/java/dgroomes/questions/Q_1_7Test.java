@@ -1,14 +1,11 @@
 package dgroomes.questions;
 
-import org.junit.jupiter.api.Test;
 import dgroomes.Matrix;
 import dgroomes.MatrixUtils;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Created by David Groomes on 9/19/2015.
- */
 public class Q_1_7Test {
 
     @Test
