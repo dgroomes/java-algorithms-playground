@@ -1,7 +1,6 @@
-package dgroomes.questions;
+package dgroomes.algorithms.questions;
 
 import dgroomes.testing.Assertions;
-import dgroomes.meta.QuestionAnswer;
 
 @QuestionAnswer(chapter = 1, question = 4)
 public class Q_1_4 {

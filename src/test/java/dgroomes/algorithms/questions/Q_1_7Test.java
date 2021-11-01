@@ -1,4 +1,4 @@
-package dgroomes.questions;
+package dgroomes.algorithms.questions;
 
 import dgroomes.coordinates.Matrix;
 import dgroomes.coordinates.MatrixUtils;

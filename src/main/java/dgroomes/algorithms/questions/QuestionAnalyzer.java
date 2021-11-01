@@ -1,4 +1,4 @@
-package dgroomes.meta;
+package dgroomes.algorithms.questions;
 
 import io.github.classgraph.ClassGraph;
 

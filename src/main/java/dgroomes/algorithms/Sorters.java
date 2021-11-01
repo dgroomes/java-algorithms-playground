@@ -1,4 +1,4 @@
-package dgroomes.sort;
+package dgroomes.algorithms;
 
 import java.util.ArrayList;
 import java.util.List;

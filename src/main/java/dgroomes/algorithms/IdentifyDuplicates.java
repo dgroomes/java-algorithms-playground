@@ -1,4 +1,4 @@
-package dgroomes.questions;
+package dgroomes.algorithms;
 
 import java.time.Duration;
 import java.time.Instant;

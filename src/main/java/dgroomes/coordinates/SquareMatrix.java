@@ -1,6 +1,6 @@
 package dgroomes.coordinates;
 
-import dgroomes.ListUtil;
+import dgroomes.algorithms.ListUtil;
 
 import java.util.Arrays;
 import java.util.List;

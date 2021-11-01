@@ -1,4 +1,4 @@
-package dgroomes.meta;
+package dgroomes.algorithms.questions;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

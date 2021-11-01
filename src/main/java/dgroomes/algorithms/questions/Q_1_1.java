@@ -1,6 +1,4 @@
-package dgroomes.questions;
-
-import dgroomes.meta.QuestionAnswer;
+package dgroomes.algorithms.questions;
 
 import java.util.HashSet;
 import java.util.List;

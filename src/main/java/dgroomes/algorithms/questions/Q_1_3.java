@@ -1,6 +1,4 @@
-package dgroomes.questions;
-
-import dgroomes.meta.QuestionAnswer;
+package dgroomes.algorithms.questions;
 
 import java.util.List;
 import java.util.stream.Collectors;

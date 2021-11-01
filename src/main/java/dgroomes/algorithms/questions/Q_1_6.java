@@ -1,6 +1,4 @@
-package dgroomes.questions;
-
-import dgroomes.meta.QuestionAnswer;
+package dgroomes.algorithms.questions;
 
 @QuestionAnswer(chapter = 1, question = 6)
 public class Q_1_6 {

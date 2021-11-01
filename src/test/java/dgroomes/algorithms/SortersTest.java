@@ -1,4 +1,4 @@
-package dgroomes.sort;
+package dgroomes.algorithms;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,6 @@
 package dgroomes;
 
-import dgroomes.questions.IdentifyDuplicates;
+import dgroomes.algorithms.IdentifyDuplicates;
 
 /**
  * Answering questions in "Cracking The Coding Interview"

@@ -1,7 +1,6 @@
-package dgroomes.questions;
+package dgroomes.algorithms.questions;
 
 import dgroomes.testing.Assertions;
-import dgroomes.meta.QuestionAnswer;
 
 import java.util.ArrayList;
 import java.util.List;
