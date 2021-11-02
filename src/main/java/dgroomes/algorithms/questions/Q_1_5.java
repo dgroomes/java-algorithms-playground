@@ -1,25 +1,51 @@
 package dgroomes.algorithms.questions;
 
-import dgroomes.testing.Assertions;
-
-import java.util.ArrayList;
 import java.util.List;
+
+import static dgroomes.testing.Assertions.assertThat;
+import static dgroomes.testing.TestCase.test;
 
 @QuestionAnswer(chapter = 1, question = 5)
 public class Q_1_5 {
 
-    public void v_1() {
-        Assertions.assertThat(compress("aabcccc")).isEqualTo("a2b1c4");
+    public static void main(String[] args) {
+        execute(COMPRESS);
     }
 
-    public String compress(String string) {
+    /**
+     * Compress adjacent repeating characters to just one character and an integer equal to the number of times the
+     * character repeated. But, if the "compressed" string is in fact longer than the original string then the compression
+     * was not effective, just return the original string.
+     * <p>
+     * For example, compress "aabcccc" to "a2b1c4"
+     */
+    @FunctionalInterface
+    interface CompressRepeatCharacters {
+        String compress(String string);
+    }
+
+    public static void execute(CompressRepeatCharacters algorithm) {
+        var testCases = List.of(
+                test("aaa", "a3"),
+                test("aa", "aa"),
+                test("a", "a"),
+                test("", ""),
+                test("aaaaaaaaaa", "a10"),
+                test("aabcccc", "a2b1c4"));
+
+        for (var testCase : testCases) {
+            assertThat(algorithm.compress(testCase.input())).isEqualTo(testCase.expectedResult());
+        }
+    }
+
+    static CompressRepeatCharacters COMPRESS = string -> {
         if (string.length() == 0) {
             return string;
         }
-        char[] chars = string.toCharArray();
-        StringBuilder builder = new StringBuilder();
+        var chars = string.toCharArray();
+        var builder = new StringBuilder();
         int count = 1;
-        char currentChar = chars[0];
+        var currentChar = chars[0];
         for (int i = 1; i < chars.length; i++) {
             if (chars[i] == currentChar) {
                 count++;
@@ -32,25 +58,11 @@ public class Q_1_5 {
         }
         builder.append(currentChar);
         builder.append(count);
-        String compressedString = builder.toString();
+        var compressedString = builder.toString();
         if (compressedString.length() < string.length()) {
             return compressedString;
         } else {
             return string;
         }
-    }
-
-    private List<CharCount> supply() {
-        return new ArrayList<>();
-    }
-
-    static class CharCount {
-        char charac;
-        int count;
-
-        CharCount(char charac, int count) {
-            this.charac = charac;
-            this.count = count;
-        }
-    }
+    };
 }
