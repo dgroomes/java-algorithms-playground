@@ -9,12 +9,11 @@ import static dgroomes.testing.TestCase.test;
 public class Q_1_4 {
 
     public static void main(String[] args) {
-        execute(IN_PLACE);
+        execute(TWO_PASS_INSERTION);
     }
 
     /**
-     * A simple encoding function that replaces significant space characters with '%20'. Trailing spaces are considered
-     * insignificant and are omitted in the final result.
+     * A simple encoding function that replaces space characters with '%20'.
      */
     @FunctionalInterface
     interface EncodeSpaceCharacter {
@@ -24,9 +23,9 @@ public class Q_1_4 {
     // WARNING: These test cases fail! The algorithm is implemented incorrectly.
     public static void execute(EncodeSpaceCharacter algorithm) {
         var testCases = List.of(
-                test("Single space".toCharArray(), "Single%20Space".toCharArray()),
-                test("Trailing-spaces ".toCharArray(), "Trailing-spaces".toCharArray()),
-                test("  Leading-spaces".toCharArray(), "Leading-spaces".toCharArray()),
+                test("Single space".toCharArray(), "Single%20space".toCharArray()),
+                test("Trailing-space ".toCharArray(), "Trailing-space%20".toCharArray()),
+                test("  Leading-spaces".toCharArray(), "%20%20Leading-spaces".toCharArray()),
                 test("No-space".toCharArray(), "No-space".toCharArray()),
                 test(new char[]{}, new char[]{}));
 
@@ -35,30 +34,27 @@ public class Q_1_4 {
         }
     }
 
-    /**
-     * An implementation of the encode interface that operates on the input array in place. In other words, this has a
-     * side-effect! It would be worthwhile to implement an alternative implementation that does not side-effect.
-     */
-    static EncodeSpaceCharacter IN_PLACE = string -> {
-        int finderOfIndexOfFarthestNonSpace = string.length - 1;
-        int finderOfIndexOfFarthestOpen = string.length - 1;
-        while (string[finderOfIndexOfFarthestNonSpace] == ' ') {
-            finderOfIndexOfFarthestNonSpace--;
+    static EncodeSpaceCharacter TWO_PASS_INSERTION = string -> {
+        // Make a pass over the array to find the number of space characters. This let's us know what size to allocate
+        // for the new array.
+        int size = string.length;
+        for (var c : string) {
+            if (c == ' ') size += 2;
         }
-        while (finderOfIndexOfFarthestNonSpace >= 0) {
-            if (string[finderOfIndexOfFarthestNonSpace] == ' ') {
-                string[finderOfIndexOfFarthestOpen] = '0';
-                finderOfIndexOfFarthestOpen--;
-                string[finderOfIndexOfFarthestOpen] = '2';
-                finderOfIndexOfFarthestOpen--;
-                string[finderOfIndexOfFarthestOpen] = '%';
-                finderOfIndexOfFarthestOpen--;
+
+        // Make a second pass over the array and simply insert every character from the original array into the new
+        // array except for space characters, which get replaced with '%', '2', '0'.
+        var r = new char[size];
+        var idx = 0;
+        for (var c : string) {
+            if (c == ' ') {
+                r[idx++] = '%';
+                r[idx++] = '2';
+                r[idx++] = '0';
             } else {
-                string[finderOfIndexOfFarthestOpen] = string[finderOfIndexOfFarthestNonSpace];
-                finderOfIndexOfFarthestOpen--;
+                r[idx++] = c;
             }
-            finderOfIndexOfFarthestNonSpace--;
         }
-        return string;
+        return r;
     };
 }
