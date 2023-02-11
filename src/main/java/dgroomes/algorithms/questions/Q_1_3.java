@@ -1,23 +1,22 @@
 package dgroomes.algorithms.questions;
 
-import dgroomes.TerminalUtil;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static dgroomes.TerminalUtil.bold;
+import static dgroomes.TerminalUtil.reset;
 import static dgroomes.testing.TestCase.test;
+import static java.lang.System.out;
 
 public class Q_1_3 {
 
     public static void main(String[] args) {
-        TerminalUtil.reset(); TerminalUtil.bold();
-        System.out.println("Question 1.3");
-        TerminalUtil.reset();
+        bold(); out.println("Question 1.3"); reset();
 
         execute(V1);
         execute(V2);
 
-        System.out.println("\n");
+        out.println("\n");
     }
 
     /**
@@ -33,11 +32,11 @@ public class Q_1_3 {
                 test("baa", true),
                 test("aba", true),
                 test("a", false));
-        System.out.println("testing: isAPermutationOfB");
-        System.out.println("input string|expected result|actual result");
+        out.println("testing: isAPermutationOfB");
+        out.println("input string|expected result|actual result");
         testCases.forEach(testCase -> {
             boolean foundResult = algorithm.isPermutation("baa", testCase.input());
-            System.out.println(testCase.input() + "|" + testCase.expectedResult() + "|" + foundResult);
+            out.println(testCase.input() + "|" + testCase.expectedResult() + "|" + foundResult);
         });
     }
 

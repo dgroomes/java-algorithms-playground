@@ -1,23 +1,24 @@
 package dgroomes.algorithms.questions;
 
-import dgroomes.TerminalUtil;
 import dgroomes.testing.TestCase;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import static dgroomes.TerminalUtil.bold;
+import static dgroomes.TerminalUtil.reset;
+import static java.lang.System.out;
+
 public class Q_1_1 {
 
     public static void main(String[] args) {
-        TerminalUtil.reset(); TerminalUtil.bold();
-        System.out.println("Question 1.1");
-        TerminalUtil.reset();
+        bold(); out.println("Question 1.1"); reset();
 
         test(CLEVER);
         test(SIMPLE);
 
-        System.out.println("\n");
+        out.println("\n");
     }
 
     /**
@@ -35,11 +36,11 @@ public class Q_1_1 {
                 TestCase.test("ba", true),
                 TestCase.test("aa", false),
                 TestCase.test("", true));
-        System.out.println("testing: charsAreAllUnique_v_1");
-        System.out.println("input string|expected result|actual result");
+        out.println("testing: charsAreAllUnique_v_1");
+        out.println("input string|expected result|actual result");
         testCases.forEach(testCase -> {
             boolean actualResult = algorithm.charsAreAllUnique(testCase.input());
-            System.out.println(testCase.input() + "|" + testCase.expectedResult() + "|" + actualResult);
+            out.println(testCase.input() + "|" + testCase.expectedResult() + "|" + actualResult);
         });
     }
 

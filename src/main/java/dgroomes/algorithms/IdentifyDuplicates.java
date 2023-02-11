@@ -8,6 +8,10 @@ import java.util.Random;
 import java.util.Stack;
 import java.util.stream.Collectors;
 
+import static dgroomes.TerminalUtil.bold;
+import static dgroomes.TerminalUtil.reset;
+import static java.lang.System.out;
+
 /**
  * Identify duplicate values in a list.
  * <p>
@@ -15,6 +19,15 @@ import java.util.stream.Collectors;
  */
 @FunctionalInterface
 public interface IdentifyDuplicates {
+
+    static void main(String[] args) {
+        bold(); out.println("IdentifyDuplicates"); reset();
+
+        IdentifyDuplicates.BRUTE_FORCE.largeLists();
+        IdentifyDuplicates.SORTING.largeLists();
+
+        out.println("\n");
+    }
 
     /**
      * Identify values with duplicate entries in a list.
@@ -113,8 +126,8 @@ public interface IdentifyDuplicates {
      */
     default void execute(List<Integer> list) {
         var duplicates = identifyDuplicates(list);
-        System.out.printf("Found %d duplicates%n", duplicates.size());
-        System.out.printf("Duplicates: %s", duplicates);
+        out.printf("Found %d duplicates%n", duplicates.size());
+        out.printf("Duplicates: %s", duplicates);
     }
 
     /**
@@ -149,7 +162,7 @@ public interface IdentifyDuplicates {
                     return new ExecutionResult(list.size(), duplicates.size(), duration);
                 })
                 .forEach(r -> {
-                    System.out.printf("List size: %7d\tduplicates: %4d\t\tduration: %14s\t\tdurationPerEntry: %s%n",
+                    out.printf("List size: %7d\tduplicates: %4d\t\tduration: %14s\t\tdurationPerEntry: %s%n",
                             r.listSize, r.duplicates, r.duration, r.durationPerEntry());
                 });
     }
@@ -160,6 +173,6 @@ public interface IdentifyDuplicates {
     default void shortList() {
         var dupes = identifyDuplicates(IdentifyDuplicates.generateList(40, 40));
         var sortedDupes = dupes.stream().sorted().collect(Collectors.toList());
-        System.out.printf("Duplicates: %s%n", sortedDupes);
+        out.printf("Duplicates: %s%n", sortedDupes);
     }
 }

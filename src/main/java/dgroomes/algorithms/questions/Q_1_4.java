@@ -1,22 +1,21 @@
 package dgroomes.algorithms.questions;
 
-import dgroomes.TerminalUtil;
-
 import java.util.List;
 
+import static dgroomes.TerminalUtil.bold;
+import static dgroomes.TerminalUtil.reset;
 import static dgroomes.testing.Assertions.assertThat;
 import static dgroomes.testing.TestCase.test;
+import static java.lang.System.out;
 
 public class Q_1_4 {
 
     public static void main(String[] args) {
-        TerminalUtil.reset(); TerminalUtil.bold();
-        System.out.println("Question 1.4");
-        TerminalUtil.reset();
+        bold(); out.println("Question 1.4"); reset();
 
         execute(TWO_PASS_INSERTION);
 
-        System.out.println("\n");
+        out.println("\n");
     }
 
     /**
@@ -37,7 +36,7 @@ public class Q_1_4 {
                 test(new char[]{}, new char[]{}));
 
         for (var testCase : testCases) {
-            System.out.println(testCase);
+            out.println(testCase);
             assertThat(algorithm.encode(testCase.input())).isEqualTo(testCase.expectedResult());
         }
     }

@@ -4,6 +4,8 @@ import dgroomes.testing.TestCase;
 
 import java.util.List;
 
+import static dgroomes.TerminalUtil.bold;
+import static dgroomes.TerminalUtil.reset;
 import static dgroomes.testing.Assertions.assertThat;
 import static dgroomes.testing.TestCase.test;
 import static java.lang.System.out;
@@ -20,6 +22,8 @@ public class SortersTest {
   );
 
   public static void main(String[] args) {
+    bold(); out.println("SortersTest"); reset();
+
     out.println("Testing merge sort...");
     for (var testCase : TEST_CASES) {
       out.println(testCase);
@@ -41,5 +45,7 @@ public class SortersTest {
 
       assertThat(result).isEqualTo(expected);
     }
+
+    out.println("\n");
   }
 }
