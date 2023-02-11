@@ -1,6 +1,7 @@
 package dgroomes;
 
 import dgroomes.algorithms.IdentifyDuplicates;
+import dgroomes.algorithms.SortersTest;
 import dgroomes.algorithms.questions.*;
 
 /**
@@ -17,5 +18,7 @@ public class Main {
 
         IdentifyDuplicates.BRUTE_FORCE.largeLists();
         IdentifyDuplicates.SORTING.largeLists();
+
+        SortersTest.main(noArgs);
     }
 }
