@@ -1,16 +1,23 @@
 package dgroomes.algorithms.questions;
 
+import dgroomes.TerminalUtil;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static dgroomes.testing.TestCase.test;
 
-@QuestionAnswer(chapter = 1, question = 3)
 public class Q_1_3 {
 
     public static void main(String[] args) {
+        TerminalUtil.reset(); TerminalUtil.bold();
+        System.out.println("Question 1.3");
+        TerminalUtil.reset();
+
         execute(V1);
         execute(V2);
+
+        System.out.println("\n");
     }
 
     /**

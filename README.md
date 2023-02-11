@@ -29,6 +29,42 @@ Follow these instructions to build and run the program.
    * ```shell
      ./gradlew run
      ```
+   * Altogether, it should look something like this:
+     ```text
+     ❯ ./gradlew run
+     
+     > Task :run
+     Question 1.1
+     testing: charsAreAllUnique_v_1
+     input string|expected result|actual result
+     a|true|true
+     ab|true|true
+     ba|true|true
+     aa|false|false
+     |true|true
+     testing: charsAreAllUnique_v_1
+     input string|expected result|actual result
+     a|true|true
+     ab|true|true
+     ba|true|true
+     aa|false|false
+     |true|true
+     
+     
+     Question 1.3
+     testing: isAPermutationOfB
+     input string|expected result|actual result
+     baa|true|true
+     aba|true|true
+     a|false|false
+     testing: isAPermutationOfB
+     input string|expected result|actual result
+     baa|true|true
+     aba|true|true
+     a|false|false
+     
+     ... snip ...
+     ```
 3. Build the program and run the tests:
    * ```shell
      ./gradlew test

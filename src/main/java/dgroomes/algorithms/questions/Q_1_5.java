@@ -1,15 +1,22 @@
 package dgroomes.algorithms.questions;
 
+import dgroomes.TerminalUtil;
+
 import java.util.List;
 
 import static dgroomes.testing.Assertions.assertThat;
 import static dgroomes.testing.TestCase.test;
 
-@QuestionAnswer(chapter = 1, question = 5)
 public class Q_1_5 {
 
     public static void main(String[] args) {
+        TerminalUtil.reset(); TerminalUtil.bold();
+        System.out.println("Question 1.5");
+        TerminalUtil.reset();
+
         execute(COMPRESS);
+
+        System.out.println("\n");
     }
 
     /**
@@ -34,6 +41,7 @@ public class Q_1_5 {
                 test("aabcccc", "a2b1c4"));
 
         for (var testCase : testCases) {
+            System.out.println(testCase);
             assertThat(algorithm.compress(testCase.input())).isEqualTo(testCase.expectedResult());
         }
     }

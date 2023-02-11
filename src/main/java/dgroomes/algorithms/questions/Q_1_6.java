@@ -1,6 +1,5 @@
 package dgroomes.algorithms.questions;
 
-@QuestionAnswer(chapter = 1, question = 6)
 public class Q_1_6 {
 
     public static void rotateNinetyDegrees_directLowLevel(char[][] matrix) {
