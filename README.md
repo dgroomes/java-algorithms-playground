@@ -1,6 +1,22 @@
-# algorithms-playground
+# java-algorithms-playground
 
 📚 Learning and exploring algorithms (simple ones!) in Java.
+
+
+## Overview
+
+This codebase is for me to explore basic algorithms using Java. I started the beginnings of this codebase years ago
+(2016?) without version control. Later, I formalized it as a Git repository, added "run instructions" and did other
+clean ups. Today (2023), I want to get even more leverage out of it as I continue to implement algorithms in Java as a
+way to learn language features like [Java's Pattern Matching for switch](https://openjdk.org/jeps/433) and in general to
+enrich my intuition about computational power in the same spirit as [*Computers are Fast*](https://computers-are-fast.github.io/).
+
+A tenet of a codebase like this is to reduce the noise. That's why I have a "Wish List" item to remove Gradle and other
+dependencies. A project like this is for "early programmers" who are learning principles of computation and just enough
+programming language knowledge (e.g. Java, `javac`, and `java`; or honestly a non-compiled language would be best) to
+exercise their knowledge.
+
+**NOTE**: This project was developed on macOS. It is for my own personal use.
 
 
 ## Instructions
@@ -18,7 +34,7 @@ Follow these instructions to build and run the program.
      ```
    
 
-## WishList
+## Wish List
 
 General clean-ups, TODOs and things I wish to implement for this project:
 

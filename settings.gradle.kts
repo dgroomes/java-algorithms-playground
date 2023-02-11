@@ -1,1 +1,1 @@
-rootProject.name = "algorithms-playground"
+rootProject.name = "java-algorithms-playground"
