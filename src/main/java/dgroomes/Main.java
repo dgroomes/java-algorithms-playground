@@ -17,6 +17,7 @@ public class Main {
         Q_1_4.main(noArgs);
         Q_1_5.main(noArgs);
         Q_1_6Test.main(noArgs);
+        Q_1_7Test.main(noArgs);
 
         // Run the test cases of my own creation.
         IdentifyDuplicates.main(noArgs);
