@@ -1,5 +1,6 @@
 build/
 out/
+sources.txt
 .idea/
 target/
 *.iml
