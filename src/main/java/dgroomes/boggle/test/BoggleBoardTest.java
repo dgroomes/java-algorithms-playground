@@ -1,16 +1,26 @@
-package dgroomes.boggle;
+package dgroomes.boggle.test;
 
-import org.junit.jupiter.api.Test;
+import dgroomes.boggle.BoggleBoard;
 
 import java.util.List;
 
-import static dgroomes.boggle.BoggleTileAssert.assertThat;
-import static org.assertj.core.api.Assertions.assertThat;
+import static dgroomes.TerminalUtil.bold;
+import static dgroomes.TerminalUtil.reset;
+import static dgroomes.boggle.test.BoggleTileAssert.assertThat;
+import static dgroomes.testing.Assertions.assertThat;
+import static java.lang.System.out;
 
 public class BoggleBoardTest {
 
-    @Test
-    public void testIterator() throws Exception {
+    public static void main(String[] args) {
+        bold(); out.println("BoggleBoardTest"); reset();
+
+        testIterator();
+
+        out.println("\n");
+    }
+
+    public static void testIterator() {
         // Arrange
         var boggleBoard = makeBoard();
 

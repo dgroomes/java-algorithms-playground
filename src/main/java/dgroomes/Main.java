@@ -3,6 +3,8 @@ package dgroomes;
 import dgroomes.algorithms.IdentifyDuplicates;
 import dgroomes.algorithms.SortersTest;
 import dgroomes.algorithms.questions.*;
+import dgroomes.boggle.test.BoggleBoardTest;
+import dgroomes.boggle.test.WordFinderTest;
 
 /**
  * Please see the README for more information.
@@ -22,5 +24,7 @@ public class Main {
         // Run the test cases of my own creation.
         IdentifyDuplicates.main(noArgs);
         SortersTest.main(noArgs);
+        BoggleBoardTest.main(noArgs);
+        WordFinderTest.main(noArgs);
     }
 }

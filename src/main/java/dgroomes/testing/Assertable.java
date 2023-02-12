@@ -18,13 +18,14 @@ public class Assertable<T> {
     public void isEqualTo(T expected) {
         boolean result = actual.equals(expected);
         if (!result) {
-            fail("actualValue=" + actual + " is not equal to expectedValue=" + expected);
+            String msg = "actualValue=%s is not equal to expectedValue=%s.".formatted(actual, expected);
+            fail(msg);
         }
     }
 
     public void isNotNull() {
         if (actual == null) {
-            fail("is null");
+            fail("Value is null but expected it to be non-null.");
         }
     }
 

@@ -9,6 +9,10 @@ public class Assertions {
         return new ComparableAssertable<>(actual);
     }
 
+    public static BooleanAssertable assertThat(Boolean actual) {
+        return new BooleanAssertable(actual);
+    }
+
     public static CharArrayAssertable assertThat(char[] actual) {
         return new CharArrayAssertable(actual);
     }
