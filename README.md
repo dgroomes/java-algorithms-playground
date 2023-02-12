@@ -65,11 +65,7 @@ Follow these instructions to build and run the program.
      
      ... snip ...
      ```
-3. Build the program and run the tests:
-   * ```shell
-     ./gradlew test
-     ```
-   
+
 
 ## Wish List
 
@@ -86,7 +82,7 @@ General clean-ups, TODOs and things I wish to implement for this project:
   complexity of the codebase and ultimately is a risk for losing the reader. They may try to run the project and give up
   because of environmental issues or worse software rot (old versions of libraries and tools that don't work after some
   years). That would be a shame.
-   * Replace JUnit tests with `public static void main` tests
+   * DONE Replace JUnit tests with `public static void main` tests
    * Remove Gradle. In place of it, there will be a build script that looks like this <https://github.com/dgroomes/jshell-playground/blob/d2a0674b78c17493b0e9c79bede05ee6d8c4fca6/basic/build.sh#L11>
 * [ ] Consistent test log output. Right now it's a mismash of "printing test cases" or printing nothing at all. I don't
   mean for this to be a "test framework" but instead just conventions for describe what is being tested, and the test
