@@ -16,4 +16,10 @@ public class ComparableAssertable<T extends Comparable<T>> extends Assertable<T>
             fail("Expected %s (actual) to be greater than %s".formatted(actual, other));
         }
     }
+
+    public void isLessThan(T other) {
+        if (other.compareTo(actual) <= 0) {
+            fail("Expected %s (actual) to be less than %s".formatted(actual, other));
+        }
+    }
 }

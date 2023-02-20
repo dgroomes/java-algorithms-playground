@@ -150,7 +150,7 @@ public interface IdentifyDuplicates {
                 100,
                 1_000,
                 10_000,
-                100_000);
+                40_000);
 
         listSizes.stream()
                 .map(listSize -> {

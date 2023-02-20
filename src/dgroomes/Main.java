@@ -26,5 +26,6 @@ public class Main {
         SortersTest.main(noArgs);
         BoggleBoardTest.main(noArgs);
         WordFinderTest.main(noArgs);
+        BinarySearchTest.main(noArgs);
     }
 }

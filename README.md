@@ -23,14 +23,14 @@ programmers" who are learning principles of computation and just enough programm
 
 Follow these instructions to build and run the program.
 
-1. Use Java 17
+1. Use Java 19
 2. Compile the program:
    * ```shell
      ./build.sh
      ```
 3. Run the program:
    * ```shell
-     java -cp out/ dgroomes.Main
+     java -cp out/ --enable-preview dgroomes.Main
      ```
    * The program should output something like this:
      ```text
@@ -87,3 +87,5 @@ General clean-ups, TODOs and things I wish to implement for this project:
 * [ ] Consistent test log output. Right now it's a mismash of "printing test cases" or printing nothing at all. I don't
   mean for this to be a "test framework" but instead just conventions for describe what is being tested, and the test
   result (success or failure). 
+* [x] DONE Port over the simple search algorithms from my other playground repo: <https://github.com/dgroomes/arrow-playground>.
+  Those algorithms should live here and that repo should be focused on the mechanics of the Arrow library.

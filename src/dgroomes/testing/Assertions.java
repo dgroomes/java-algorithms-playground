@@ -1,5 +1,7 @@
 package dgroomes.testing;
 
+import java.util.Optional;
+
 public class Assertions {
     public static <T> Assertable<T> assertThat(T actual) {
         return new Assertable<>(actual);
@@ -15,5 +17,10 @@ public class Assertions {
 
     public static CharArrayAssertable assertThat(char[] actual) {
         return new CharArrayAssertable(actual);
+    }
+
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
+    public static <T> OptionalAssertable<T> assertThat(Optional<T> actual) {
+        return new OptionalAssertable<>(actual);
     }
 }

@@ -12,4 +12,5 @@ find src -name "*.java" > sources.txt
 javac \
   @sources.txt \
   -d out \
-  --release 17
+  --release 19 \
+  --enable-preview
